@@ -1,7 +1,13 @@
 use std::io;
 
+use rand::Rng;
+
 fn main() {
     println!("Guess the number!"); // 数を当ててごらん
+
+    let serect_number = rand::thread_rng().gen_range(1..101);
+
+    
 
     println!("Please input your guess."); // ほら、予想を入力してね
 
