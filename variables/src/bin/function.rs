@@ -26,6 +26,44 @@
 //   println!("The measurement is: {}{}", value, unit_label);
 // }
 
+// エラーが起こる(式指向言語のため)
+// fn main() {
+//     let x = (let y = 6);
+// }
+
+// 式(x + 1)にコロンは付けない
+// fn main() {
+//     let y = {let x = 3; x + 1};
+//     println!("The value of y is: {}", y);
+// }
+
+// 関数の戻り値1
+// fn five() -> i32 {5}
+
+// fn main() {
+//     let x = five();
+
+//     println!("The value of x is: {}", x);
+// }
+
+// 関数の戻り値2
+// fn main() {
+//     let x = plus_one(5);
+
+//     println!("The value of x is: {}", x);
+// }
+
+// fn plus_one(x: i32) -> i32 {
+//     x + 1
+// }
+
+// 式(x + 1)に;(セミコロン)が付いているのでエラー
 fn main() {
-    let x = (let y = 6);
+    let x = plus_one(5);
+
+    println!("The value of x is: {}", x);
+}
+
+fn plus_one(x: i32) -> i32 {
+    x + 1;
 }
