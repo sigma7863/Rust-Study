@@ -73,7 +73,7 @@
 // breakで終了, continueでスキップ
 // fn main() {
 //     let mut count = 0;
-//     'counting_up: loop {
+//     'counting_up: loop {   // 'を付けることによってラベルを定義してラベルを付けたところまで抜けるか設定できる
 //         println!("count = {}", count);
 //         let mut remaining = 10;
 
@@ -92,3 +92,44 @@
 //     }
 //     println!("End count = {}", count);
 // }
+
+// whileでループする
+// fn main() {
+//     let mut number = 3;
+//     while number != 0 {
+//         println!("{}!", number);
+
+//         number -= 1;
+//     }
+
+//     println!("LIFTOFF!"); // 発射！
+// }
+
+// whileの条件式を間違えるとエラー + 毎回境界値チェックを行うため、遅くなる
+// fn main() {
+//    let a = [10, 20, 30, 40, 50];
+//    let mut index = 0;
+
+//    while index < 5 {
+//        println!("the value is: {}", a[index]); // 値は{}です
+
+//        index += 1;
+//    }
+// }
+
+// ↑ forループを使えば解決！
+// fn main() {
+//     let a = [10, 20, 30, 40, 50];
+
+//     for element in a {
+//         println!("the value is; {}", element);
+//     }
+// }
+
+// "rev"を使って
+fn main() {
+    for number: i16 in(1..4).rev() {
+        println!("{}!", number);
+    }
+    println!("LIFTOFF!!!");
+}
