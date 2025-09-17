@@ -126,9 +126,9 @@
 //     }
 // }
 
-// "rev"を使って
+// "rev"を使ってカウントダウン
 fn main() {
-    for number: i16 in(1..4).rev() {
+    for number in(1..4).rev() {
         println!("{}!", number);
     }
     println!("LIFTOFF!!!");
