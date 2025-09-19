@@ -1,10 +1,10 @@
 use std::io;
 fn main() {
     // ↓ コンパイルエラー(再代入できない)
-    // let x = 5;
-    // println!("The value of x is: {}", x);     // xの値は{}です
-    // x = 6;
-    // println!("The value of x is: {}", x);
+    let x = 5;
+    println!("The value of x is: {}", x);     // xの値は{}です
+    x = 6;
+    println!("The value of x is: {}", x);
 
     // mutについて(不変から可変にする)
     let mut x = 5;
